@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="register.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="img"></div>
+
+    <div id="wrapper">
+        <form onsubmit="sighup()">
+            <h3>Đăng ký </h3>
+            <div class="form-group">
+                <input type="text" id="username" placeholder="User Name">   
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" placeholder="Email">   <!-- những input có chứa required bắt buộc phải chứa dữ liệu-->
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Password">
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" placeholder="Confirm password">
+            </div>
+            <div class="login"><a href="Login.html">Đăng nhập</a></div>
+            <input type="submit" value="Đăng ký" id="btn-register" >
+        </form>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

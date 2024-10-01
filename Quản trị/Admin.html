@@ -1,0 +1,522 @@
+<!DOCTYPE html>
+<html lang="vn">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ADMIN</title>
+    <link rel="stylesheet" href="Admin.css">
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/951fcb8c3d.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="wrapper">
+        <div class="menu-bar">
+            <ul>
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="person-circle-outline"></ion-icon></span>
+                        <span class="title">Admin</span>
+                    </a>
+                </li>
+                <li class="active">
+                    <a href="#tong-quan">
+                        <span class="icon"> <ion-icon name="home-outline"></ion-icon></span>
+                        <span class="title">Tổng quan</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#san-pham">
+                        <span class="icon"> <ion-icon name="file-tray-stacked-outline"></ion-icon></span>
+                        <span class="title">Nước hoa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="file-tray-stacked-outline"></ion-icon></span>
+                        <span class="title">Loại nước hoa</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#khach-hang">
+                        <span class="icon"> <ion-icon name="accessibility-outline"></ion-icon></span>
+                        <span class="title">Người dùng</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="receipt-outline"></ion-icon></span>
+                        <span class="title">Đơn hàng nhập</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon name="receipt-outline"></ion-icon></span>
+                        <span class="title">Đơn hàng bán</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon class="fa-solid fa-building-user"></ion-icon></span>
+                        <span class="title">Nhà cung cấp</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <span class="icon"> <ion-icon class="fa-solid fa-pen-to-square"></ion-icon></span>
+                        <span class="title">Bài viết</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="../Trang chủ.html">
+                        <span class="icon"> <ion-icon name="arrow-forward-circle-outline"></ion-icon></span>
+                        <span class="title">User page</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="main">
+            <div class="topbar">
+                <div class="toggle">
+                    <ion-icon name="menu-outline"></ion-icon>
+                </div>
+                <div class="search">
+                    <label>
+                        <input type="text" placeholder="Search here">
+                        <ion-icon name="search-outline"></ion-icon>
+                    </label>
+                </div>
+            </div>
+            <div class="tab-content">
+                <div class="content-item" id="tong-quan">
+                    <div class="card-box">
+                        <div class="card">
+                            <div>
+                                <div class="numbers" id="tongsokh">3174</div>
+                                <div class="card-name">Lượng khách</div>
+                            </div>
+                            <div class="icon-box">
+                                <ion-icon name="accessibility-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <div class="numbers" id="sumaccess">14062</div>
+                                <div class="card-name">Lượt truy cập</div>
+                            </div>
+                            <div class="icon-box">
+                                <ion-icon name="planet-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <div class="numbers" id="spdaban">1322</div>
+                                <div class="card-name">Sản phẩm đã bán</div>
+                            </div>
+                            <div class="icon-box">
+                                <ion-icon name="checkmark-circle-outline"></ion-icon>
+                            </div>
+                        </div>
+                        <div class="card">
+                            <div>
+                                <div class="numbers" id="doanhthu">$5,000</div>
+                                <div class="card-name">Tổng doanh thu</div>
+                            </div>
+                            <div class="icon-box">
+                                <ion-icon name="cash-outline"></ion-icon>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="details">
+                        <div class="recentorders">
+                            <div class="card-header">
+                                <h2>Đơn hàng gần đây</h2>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Mã đơn</td>
+                                        <td>Khách hàng</td>
+                                        <td>Giá</td>
+                                        <td>Trạng thái</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="listdonRecent">
+                                    <!-- <tr>
+                                        <td>Nước hoa</td>
+                                        <td>500000 </td>
+                                        <td>Đang chờ</td>
+                                    </tr>
+                                    <tr>
+                                        <td>Nước hoa</td>
+                                        <td>400000 </td>
+                                        <td>Đang chờ</td>
+                                    </tr> -->
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- khach hang moi -->
+                        <div class="recentcustomers">
+                            <div class="card-header">
+                                <h2>Khách gần đây</h2>
+                            </div>
+                            <table>
+                                <tr>
+                                    <td>
+                                        <h4 class="ten-khach">Đỗ Thu Phương</h4>
+                                    </td>
+                                    <td>
+                                        <h4 class="sdt-khach">0385340207</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4 class="ten-khach">Nguyễn Văn An</h4>
+                                    </td>
+                                    <td>
+                                        <h4 class="sdt-khach">0143566788</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4 class="ten-khach">Trần Duy Anh</h4>
+                                    </td>
+                                    <td>
+                                        <h4 class="sdt-khach">01265758452</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4 class="ten-khach">Lý Thành Đạt</h4>
+                                    </td>
+                                    <td>
+                                        <h4 class="sdt-khach">018768633</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4 class="ten-khach">Ngô Nhi Hoàn</h4>
+                                    </td>
+                                    <td>
+                                        <h4 class="sdt-khach">0122534758</h4>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <h4 class="ten-khach">Lê Hoàng Vân</h4>
+                                    </td>
+                                    <td>
+                                        <h4 class="sdt-khach">0122867956</h4>
+                                    </td>
+                                </tr>
+
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-item" id="san-pham">
+                    <div class="colum12">
+                        <div class="cot1">
+                            <div class="card-header">
+                                <h2>Nhập sản phẩm</h2>
+                            </div>
+                            <form>
+                                <div class="title-input">
+                                    <h4>Loại nước hoa</h4>
+                                </div>
+                                <div class="input-box">
+                                    <select name="loaisp" id="loaisp">
+                                        <option value="choose">-Chọn thương hiệu-</option>
+                                        <option value="GUCCI">GUCCI</option>
+                                        <option value="CHANEL">DIOR</option>
+                                        <option value="DOLCE-GABBANA">DOLCE & GABBANA</option>
+                                        <option value="">...</option>
+                                    </select>
+                                </div>
+                                <div class="title-input">
+                                    <h4>Mã nước hoa</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="masp" placeholder="">
+                                </div>
+                                <div class="title-input">
+                                    <h4>Tên nước hoa</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="tensp">
+                                </div>
+                                <div class="title-input">
+                                    <h4>Ảnh</h4>
+                                </div>
+                                <div class="input-box">
+                                    <div><img id="file-img" src="choose.png" height="200" width="200" style="margin-left: 40px;"></div>
+                                    <input type="file" id="input">
+                                    <!-- <span style="float: left;">View:</span>
+                                    <img id="viewimg" style="max-width:180px;max-height:180px;margin-top: 10px;"> -->
+                                </div>
+                                <div class="title-input">
+                                    <h4>Số lượng</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="number" id="soluongsp">
+                                </div>
+                                <div class="title-input">
+                                    <h4>Giá bán</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="giaban">
+                                </div>
+                            </form>
+                            <div class="list-btn">
+                                <button class="btn-form" onclick="Themsp()">Thêm</button>
+                                <button class="btn-form" onclick="Capnhatsp()">Cập nhật</button>
+                                <button class="btn-form" onclick="Nhapmoi()">Nhập mới</button>
+                            </div>
+                        </div>
+                        <div class="cot2">
+                            <div class="card-header">
+                                <h2>Danh sách sản phẩm</h2>
+                                <h4>Tổng : <span id="tongsosp">0</span></h4>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Mã nước hoa</td>
+                                        <td>Loại</td>
+                                        <td>Tên</td>
+                                        <td>Số lượng</td>
+                                        <td>Giá</td>
+                                        <td>Thao tác</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="listProduct">
+                                    <!-- <tr>
+                                        <td>Chanel</td>
+                                        <td>DIOR</td>
+                                        <td>GUCCI </td>
+                                        <td>50 </td>
+                                        <td>500000 </td>
+                                        <td>
+                                            <ion-icon name="create-outline" title="Sửa" onclick="Suasp()"></ion-icon>
+                                            <ion-icon name="trash-outline" title="Xóa" onclick="Xoasp()"></ion-icon>
+                                        </td>
+                                    </tr> -->
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-item" id="khach-hang">
+                    <div class="colum12">
+                        <div class="cot1">
+                            <div class="card-header">
+                                <h2>Nhập thông tin khách</h2>
+                            </div>
+                            <form>
+                                <div class="title-input">
+                                    <h4>Mã khách hàng</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="makh" placeholder="Tự tạo nếu không nhập">
+                                </div>
+                                <div class="title-input">
+                                    <h4>Tên khách hàng</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="tenkh_ten">
+                                </div>
+                                <div class="title-input">
+                                    <h4>Họ khách hàng</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="tenkh_ho">
+                                </div>
+                                <div class="title-input">
+                                    <h4>Email</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="emailkh">
+                                </div>
+                                <div class="title-input">
+                                    <h4>Số điện thoại</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="sdtkh">
+                                </div>
+                                <div class="title-input">
+                                    <h4>Địa chỉ</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="text" id="diachikh">
+                                </div>
+                                <div class="title-input">
+                                    <h4>Mật khẩu</h4>
+                                </div>
+                                <div class="input-box">
+                                    <input type="password" id="mkkh">
+                                </div>
+                            </form>
+                            <div class="list-btn">
+                                <button class="btn-form" onclick="Themkh()">Thêm</button>
+                                <button class="btn-form" onclick="NhapMoikh()">Nhập lại</button>
+                            </div>
+                        </div>
+                        <div class="cot2">
+                            <div class="card-header">
+                                <h2>Danh sách khách hàng</h2>
+                                <h4>Tổng : <span id="tongsokh">0</span></h4>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Mã khách hàng</td>
+                                        <td>Tên</td>
+                                        <td>SĐT</td>
+                                        <td>Email</td>
+                                        <td>Địa chỉ</td>
+                                        <td>Thao tác</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="listCustomer">
+                                    <!-- <tr>
+                                        <td>1234567890987</td>
+                                        <td>Đỗ Thu Phương</td>
+                                        <td>0385340207</td>
+                                        <td>lananhsun44@gmail.com </td>
+                                        <td>Hưng Yên</td>
+                                        <td>
+                                            <ion-icon name="create-outline" title="Sửa" onclick="Suakh()"></ion-icon>
+                                            <ion-icon name="trash-outline" title="Xóa" onclick="Xoakh()"></ion-icon>
+                                        </td>
+                                    </tr> -->
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+                <div class="content-item" id="don-hang">
+                    <div class="colum12">
+                        <div class="cot1">
+                            <div class="card-header">
+                                <h2>Danh sách đơn hàng</h2>
+                                <h4>Tổng : <span id="tongsodon">0</span></h4>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Mã đơn</td>
+                                        <td>Tên khách</td>
+                                        <td>SĐT</td>
+                                        <td>Địa chỉ</td>
+                                        <td>Thành tiền</td>
+                                        <td>Thao tác</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="listdonhang">
+                                    <!-- <tr>
+                                        <td>1234567890987</td>
+                                        <td>Đỗ Thu Phương</td>
+                                        <td>0385340207</td>
+                                        <td>Hưng Yên</td>
+                                        <td>900000</td>
+                                        <td>
+                                            <ion-icon name="create-outline" title="Sửa" onclick="Suakh()"></ion-icon>
+                                            <ion-icon name="trash-outline" title="Xóa" onclick="Xoakh()"></ion-icon>
+                                        </td>
+                                    </tr>
+                                     -->
+
+                                </tbody>
+                            </table>
+                            <div class="list-btn">
+                                <button class="btn-form" onclick="LoadDatadon()">Reload</button>
+                            </div>
+                        </div>
+                        <div class="cot2">
+                            <div class="card-header">
+                                <h2>Lịch sử đơn hàng</h2>
+                                <h4>Tổng : <span id="tonglsdon">0</span></h4>
+                            </div>
+                            <table>
+                                <thead>
+                                    <tr>
+                                        <td>Mã đơn</td>
+                                        <td>Mã khách</td>
+                                        <td>Số tiền</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="listlsdonhang">
+                                    <!-- <tr>
+                                        <td>1234567890987</td>
+                                        <td>Đỗ Thu Phương</td>
+                                        <td>0385340207</td>
+                                        <td>Hưng Yên</td>
+                                        <td>900000</td>
+                                        <td>
+                                            <ion-icon name="create-outline" title="Sửa" onclick="Suakh()"></ion-icon>
+                                            <ion-icon name="trash-outline" title="Xóa" onclick="Xoakh()"></ion-icon>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td>1234567890987</td>
+                                        <td>Đỗ Thu Phương</td>
+                                        <td>0385340207</td>
+                                        <td>Hưng Yên</td>
+                                        <td>500000</td>
+                                        <td>
+                                            <ion-icon name="create-outline" title="Sửa" onclick="Suakh()"></ion-icon>
+                                            <ion-icon name="trash-outline" title="Xóa" onclick="Xoakh()"></ion-icon>
+                                        </td>
+                                    </tr> -->
+
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
+    <script>
+        //show content
+        $(document).ready(function() {
+            $('.content-item').hide();
+            $('.content-item:first-child').fadeIn();
+            $('.menu-bar ul li').click(function() {
+                $('.menu-bar ul li').removeClass('active');
+                $(this).addClass('active');
+                let id_content = $(this).children('a').attr('href');
+                $('.content-item').hide();
+                $(id_content).fadeIn();
+                return false;
+            });
+        });
+        // $('.menu-bar').hover(function(){
+        //     $('.menu-bar ul li').removeClass('active');
+        // }, function(){
+        //     $('.menu-bar ul li').addClass('active');
+        // });
+        //menu toggle
+        let toggle = document.querySelector('.toggle');
+        let menu = document.querySelector('.menu-bar');
+        let main = document.querySelector('.main');
+
+        toggle.onclick = function() {
+                menu.classList.toggle('active');
+                main.classList.toggle('active');
+            }
+            // ========================
+    </script>
+    <script src="Admin.js"></script>
+</body>
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+
+</html>

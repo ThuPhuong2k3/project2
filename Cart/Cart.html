@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" />
+    <!-- Icon -->
+    <script src="https://kit.fontawesome.com/951fcb8c3d.js" crossorigin="anonymous"></script>
+    <!-- Navbar effect -->
+    <script src="https://code.jquery.com/jquery-3.6.0.js" integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk=" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet" href="Cart.css">
+    <!-- <link rel="stylesheet" href="Cart.js"> -->
+    <title>Giỏ hàng</title>
+</head>
+<body>
+    <div class="wrapper">
+        <header id="header">   <!--  tiêu đề website  -->
+            <div class="topbar">
+                <div class="tim-kiem">
+                    <input class="input" type="type" placeholder="Search..." />
+                    <div class="btn"><i class="fas fa-search"></i></div>
+                </div>
+                
+                <div class="title-header">
+                    <div class="title">CAM KẾT CHÍNH HÃNG - HOÀN TIỀN 500% GIÁ TRỊ SẢN PHẨM NẾU PHÁT HIỆN HÀNG FAKE</div>
+                    <div class="buy-cart"><img class="btncart" src="../image-removebg-cart-preview.png"><sup class="w1-margin-left"><span class="quantityCart">0</span></sup></div>
+                    <div class="login">
+                        <a href=""><img class="btn-user" src="../image-removebg-user-preview.png"></a>
+                        <a href="sigh in & sigh up/Login.html">Đăng nhập</a>
+                    </div>
+                </div>
+            </div>
+            <div class="bottombar">
+                <div class="menu">
+                    <div class="logo">
+                        <a href="https://nuochoachanel.vn/" title="NuocHoaChanel.vn - Bảo hành tới giọt cuối cùng" rel="home">
+                            <img id="header_logo" src="https://nuochoachanel.vn/wp-content/uploads/2018/12/nuoc-hoa-chanel-vn.png" alt="NuocHoaChanel.vn">
+                        </a>
+                    </div>
+                    <nav class="container">
+                        <ul class="main-menu">
+                            <li><a href="#">THƯƠNG HIỆU ▼ </a>
+                                <ul class="sub-menu">
+                                    <li><a href="">CHANEL</a></li>
+                                    <li><a href="">VERSACE</a></li>
+                                    <li><a href="">GUCCI</a></li>
+                                    <li><a href="">DIOR</a></li>
+                                    <li><a href="">DOLCE & GABBANA</a></li>
+                                    <li><a href="">LANCOME</a></li>
+                                    <li><a href="">GIORGIO ARMANI</a></li>
+                                    <li><a href="">HERMES</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">NƯỚC HOA NAM ▼ </a>
+                                <ul class="sub-menu">
+                                    <li><a href="">CHANEL</a></li>
+                                    <li><a href="">DIOR</a></li>
+                                    <li><a href="">GUCCI</a></li>
+                                    <li><a href="">LANCOME</a></li>
+                                    <li><a href="">TOM FORD</a></li>
+                                    <li><a href="">CREED</a></li>
+                                    <li><a href="">CAROLINA HERRERA</a></li>
+                                    <li><a href="">HERMES</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">NƯỚC HOA NỮ ▼ </a>
+                                <ul class="sub-menu">
+                                    <li><a href="">CHANEL</a></li>
+                                    <li><a href="">DIOR</a></li>
+                                    <li><a href="">LANCOME</a></li>
+                                    <li><a href="">TOM FORD</a></li>
+                                    <li><a href="">HERMES</a></li>
+                                    <li><a href="">VALENTINO</a></li>
+                                    <li><a href="">GIORGIO ARMANI</a></li>
+                                    <li><a href="">BURBERRY</a></li>
+                                </ul>
+                            </li>
+                            <li><a href="#">NƯỚC HOA UNISEX</a></li>
+                            <li><a href="#">MỸ PHẨM</a></li>
+                            <li><a href="#">TOP 2020 <span class="w3-margin-left">Hot</span></a></li>
+                            <li><a href="#">SALE OFF <span class="w4-margin-left">Sale</span></a></li>
+                        </ul>
+                    </nav>
+                </div>
+            </div>
+        </header>  
+
+        <section class="cart">
+            <div class="content">
+                <div class="cart-top-wrap">
+                    <div class="cart-top">
+                        <div class="cart-top-cart cart-top-item">
+                            <i class="fa-solid fa-cart-shopping"></i>
+                        </div>
+                        <div class="cart-top-adress cart-top-item">
+                            <i class="fa-solid fa-location-dot"></i>
+                        </div>
+                        <div class="cart-top-cart-payment cart-top-item">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="content">
+                <div class="cart-content-row">
+                    <div class="cart-content-left">
+                        <table>
+                            <tr>
+                                <th>Sản phẩm</th>
+                                <th>Tên sản phẩm</th>
+                                <th>Size</th>
+                                <th>Số lượng</th>
+                                <th>Thành tiền</th>
+                                <th>Xóa</th>
+                            </tr>
+                            <tr>
+                                <td><img src="https://nuochoachanel.vn/wp-content/uploads/2023/02/GUCCI-Floral-Gorgeous-Jasmin-EDP-247x296.jpg" alt="sản phẩm"></td>
+                                <td><p>GUCCI Floral Gorgeous Jasmine</p></td>
+                                <td><p>100ml</p></td>
+                                <td><input type="number" value="1" min="1"></td>
+                                <td><p>300.000<u>đ</u></p></td>
+                                <td><span>X</span></td>
+                            </tr>
+                            <tr>
+                                <td><img src="https://nuochoachanel.vn/wp-content/uploads/2023/02/Gucci-Floral-Gorgeous-Gardenia-EDP-247x296.jpg" alt="sản phẩm"></td>
+                                <td><p>GUCCI Floral Gorgeous Gardenia EDP</p></td>
+                                <td><p>100ml</p></td>
+                                <td><input type="number" value="1" min="1"></td>
+                                <td><p>300.000<u>đ</u></p></td>
+                                <td><span>X</span></td>
+                            </tr>
+                        </table>
+                    </div>
+                    <div class="cart-content-right">
+                        <table>
+                            <tr>
+                                <th colspan="2">TỔNG TIỀN GIỎ HÀNG</th>
+                            </tr>
+                            <tr>
+                                <td>TỔNG SẢN PHẨM</td>
+                                <td>2</td>
+                            </tr>
+                            <tr>
+                                <td>TỔNG TIỀN HÀNG</td>
+                                <td><p>600.000<u>đ</u></p></td>
+                            </tr>
+                            <tr>
+                                <td>TẠM TÍNH</td>
+                                <td><p style="color: black; font-weight: bold;">600.000<u>đ</u></p></td>
+                            </tr>
+                        </table>
+                        <div class="cart-content-right-button">
+                            <button><a href="../Trang chủ.html">TIẾP TỤC MUA SẮM</a></button>
+                            <button><a href="delivery.html">THANH TOÁN</a></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <br><br><br><br><br><br><br><br><br><br><br><br><br>
+        <footer>
+            <div class="footer_main">
+                <div class="tag">
+                    <h1>Thông Tin liên hệ</h1>
+                    <a href="https://goo.gl/maps/SdFLcaBiLQW1pcLR9"><i class="fa-solid fa-house"></i>Đình Dù / Văn Lâm / Hưng Yên</a>
+                    <a href="#"><i class="fa-solid fa-phone"></i>0385340207</a>
+                    <a href="#"><i class="fa-solid fa-envelope"></i>lananhsun44@gmail.com</a>
+                </div>
+
+                <div class="tag">
+                    <h1>Hỗ trợ khách hàng</h1>
+                    <a href="#">Chính sách bảo hành</a>
+                    <a href="#">Chính sách vận chuyển</a>
+                    <a href="#">Các lựa chọn thanh toán</a>
+                </div>
+                <div class="tag">
+                    <h1>Theo dõi tôi</h1>
+                    <div class="social_link">
+                        <a href=""><i class="fa-brands fa-facebook-f"></i>Đỗ Thu Phương</a>
+                        <a href=""><i class="fa-brands fa-instagram"></i>lananh.do.03</a>
+                    </div>
+                </div>
+
+            </div>
+        </footer>
+    </div>
+</body>
+</html>

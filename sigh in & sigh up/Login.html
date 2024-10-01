@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <link rel="stylesheet" href="Login.css">
+</head>
+<body>
+    <!--sử dụng 3 thuộc tính cho video background: autoplay_video chạy tự động; loop_video tự phát lại vô hạn; muted_tắt âm thanh video -->
+    <video autoplay loop muted>     
+        <source type="video/mp4" src="production_id_4659830 (2160p).mp4">
+    </video>
+
+    <div id="wrapper">
+        <form onsubmit="login()">
+            <h3>Đăng nhập</h3>
+            <div class="form-group">
+                <input type="text" id="username" required>  
+                <label for="">User Name</label> 
+            </div>
+            <div class="form-group">
+                <input type="email" id="email" required>   <!-- những input có chứa required bắt buộc phải chứa dữ liệu-->
+                <label for="">Email</label>
+            </div>
+            <div class="form-group">
+                <input type="password" id="password" required>
+                <label for="">Mật khẩu</label>
+            </div>
+            <div class="register">Bạn chưa có tài khoản? <a href="register.html">Đăng kí</a></div>
+            <input type="submit" value="Đăng nhập" id="btn-login" >
+        </form>
+    </div>
+    <script src="register.js"></script>
+</body>
+</html>

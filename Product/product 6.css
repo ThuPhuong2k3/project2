@@ -1,0 +1,467 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;300;400&display=swap');
+*{
+    padding: 0;
+    margin: 0;
+    border: none;
+    
+}
+
+.wrapper{
+    max-width: 100%;
+    margin: 0 auto;
+}
+
+#header{
+    width: 100%;
+    height: 124px;
+}
+
+    .topbar
+    {
+        position: relative;     /*Vị trí tương đối*/
+        height: 39px;
+        color: white;
+        background-color: #000000;
+        font-family: sans-serif!important;
+        font-size: xx-large;
+        display: flex;
+        flex-wrap: nowrap;
+    }
+        .tim-kiem
+        {
+            margin-left: 25px;
+            font-size: 14px;
+            float: left;
+        }
+            .input
+            {
+                margin-top: 6px;
+                border: 1px soild white;
+                width: 250px;
+                height: 29px;
+                border-radius: 4px ;
+                box-shadow: none;
+                background-color: rgba(255,255,255,0.2) !important;
+                color: #FFFFFF;
+            }
+
+            .btn
+            {
+                margin-left: -20px;
+                border-radius:0;
+                height: 29px;
+                color: #FFFFFF;
+                margin-top: -2px; 
+                outline:none;
+                background-color: var(--primary-color);  /*đặt màu nền cho trang web(theo phần tử 'vd:<div class="tim-kiem"></div>' sử dụng giá trị của biến color-primary)Khi muốn thay đổi màu nền, chỉ cần thay đổi giá trị của biến này trong CSS và màu của phần tử sẽ tự động được cập nhật */
+                cursor: pointer;
+            }
+
+            .fa-search:hover{
+                color: hotpink;
+            }
+
+        .title-header
+        {
+            float: right;
+            width: 1000px;
+            height: 39px;
+            display: flex;
+            flex-wrap: nowrap;      /* trình bày trên một dòng duy nhất */
+        }
+            .title{
+                font-size: 13px;
+                float: left;
+                margin-left: 80px;
+                margin-top: 12px;
+                font-weight: 900px;
+                height: 29px;
+                width:700px;
+                font-family: 'Roboto', sans-serif;
+            }
+
+            .cart{
+                height: 25px;
+                width: 30px;
+                float: left;
+                margin-left: 180px;
+                margin-top: 7px;
+                align-items: center;
+                cursor: pointer;
+            }
+
+            #btncart{
+                height: 25px;
+                width: 30px;
+            }
+            #btncart:hover{
+                opacity: 0.85;  /*làm mờ đi*/
+            }
+
+            .login{
+                height: 18px;
+                width: 110px;
+
+                float: left;
+                margin-left: 10px;
+                margin-top: 6px;
+                padding: 3px 3px;
+                /* align-items: center; */
+                font-size: 15px;
+                font-weight: 400px;
+                font-family: 'Montserrat', sans-serif;
+                
+                background-color:#1a73e8 ;
+                border: 2px solid #1a73e8;
+
+                border-width: 2px;
+                border-style: solid;
+                border-radius: 3px;
+
+                cursor: pointer;
+            }
+
+            .login a{
+                text-decoration: none;  /*Phần gạch chân đc bỏ đi*/
+                color: #fff;
+            }
+
+            .login:hover{
+                opacity: 0.85;
+            } 
+
+            #btn-user{
+                height: 13px;
+                width: 13px;
+                cursor: pointer;
+            }
+    
+    .bottombar{
+        height: 84px;
+        color: #000000;
+        background-color: white;
+        font-family: sans-serif!important;
+        font-size: xx-large;
+        position: fixed;    /* Thiết lập vị trí cố định cho phần tử__Khi ta kéo chuột lên,xuống,trái,phải thì phần tử vẫn hiển thị cố định một chỗ  */
+        z-index: 10;    /* Phần tử có giá trị z-index lớn hơn sẽ nằm đè lên phần tử có giá trị z-index nhỏ hơn  */
+        width: 100%;
+    }
+        .menu{
+            float: left;
+            margin-left: 230px;
+            height: 85px;
+            width: 1065px;
+            background-color: white;
+
+        }
+            .logo{
+                width:200px;
+                height:85px;
+                float: left;
+                margin-left: -204px;
+                background-color: white;
+            }
+                #header_logo{
+                    width:200px;
+                    height:60px;
+                    margin-top: 10px;
+                }
+
+            .container{
+                background-color: white;
+                width: 1060px;
+                height: 30px;
+                margin-top: 23px;
+                max-width: 1075px;
+            }
+
+            nav{
+                display: flex;      /*Hiển thị trên cùng một hàng*/
+                justify-content: space-between;     /*Khoảng cách nhất định */
+                justify-items: center;          /*đặt menu ở trung tâm*/
+
+            }
+
+            .main-menu{
+                display: flex;      /*Hiển thị trên cùng một hàng*/
+                list-style: none;   /*bỏ tất cả style cho danh sách_Mất đi các chấm chấm trong danh sách */
+                margin: 0;
+                padding: 0;
+            }
+
+            .main-menu li{
+                position: relative;     /*để làm chuẩn*/
+            }
+
+            .main-menu li a{
+                color: black;
+                display: block;     /*cho phép đc tác động lên padding*/
+                padding: 6px 20px;  /*khoảng cách trên dưới , trái phải*/
+                text-decoration: none;  /*Phần gạch chân đc bỏ đi*/
+                font-size:14px;
+                font-weight: bold;
+            }
+
+            .main-menu ul.sub-menu{
+                position: absolute;
+                background-color: #f78da7;
+                padding:15px 0px ;
+                text-decoration: none;
+                list-style: none;
+                width: 200px;
+                display: none;
+            }
+
+            .main-menu li:hover>ul.sub-menu{        /*di chuột vào sẽ xuất hiện*/
+                display: block;         /*cho phép đc tác động lên padding*/
+            }
+
+            .main-menu ul.sub-menu a{
+                padding: 8px 15px;
+                border-bottom: 2px solid white;     /*đường viền bên dưới*/
+            }
+
+            .main-menu ul.sub-menu li:hover>a{          /*hover_di chuột sẽ đổi màu*/
+                border-bottom:1px solid black; 
+                color: #ffffff;
+            }
+
+            .main-menu ul.sub-menu li:last-child a{     /* bỏ đường viền ở cuối*/
+                border: none;       
+            }
+
+            .w3-margin-left, .w4-margin-left{
+                height: 13px;
+                width: 26px;
+                color: white;
+                border-radius: 2px 2px 2px 2px;
+                box-shadow: 1px 1px 1px gray;
+            }
+
+            .w3-margin-left{
+               background-color: red; 
+            }
+
+            .w4-margin-left{
+                background-color: chocolate; 
+            }
+
+#nav-menu{
+    width: 100%;
+    height: 31px;
+    background-image: url(https://nuochoachanel.vn/wp-content/uploads/2022/11/Dolce-Gabbana-Light-Blue-Italian-Love-Pour-Femme-247x296.webp);
+    background-size: cover;
+    background-position-y:-830px ;
+    font-size: 10px;
+    color: bisque;
+    padding-top: 30px;
+}
+
+#wrapper-content{
+    text-align: justify;
+    width: 100%;
+}
+    .content{
+        width: 100%;
+        height: 471px;
+        margin-top: 10px;
+    }
+        .product{
+            width: 304px;
+            height: 424px;
+            float: left;
+            margin-left: 49px;
+            background-color: tan;
+        }
+            .anh1{
+                width: 100%;
+                height: 100%;
+            }
+
+            .sidebar{
+                width: 900px;
+                height: 424px;
+                float: right;
+                font-family: "Roboto", sans-serif;
+                align-content: space-around;
+            }
+
+            p{
+                padding: 5px 0px;
+            }
+
+    .wrapper-cart{
+        width: 900px;
+        height: 351px;
+        float: right;
+    }
+        .row1{
+            display: flex;
+        }
+
+            .list-select{
+                width: 636px;
+                height: 35px;
+                border-radius: 3px ;    /* Tạo viền */
+                border: 2px solid #ececec;
+            }
+
+        .row2{
+            width: 955px;
+            height: 41px;
+            display: flex;
+            align-items: center;
+            /* justify-content: center; */
+            
+            background-color: white;
+            margin-top: 35px;
+        }  
+
+            #buy-amount{
+                display: flex;
+            }
+
+            #buy-amount #amount{
+                width: 40px;
+                text-align: center; 
+                border: 2px solid #ececec;
+                
+            }
+
+            #buy-amount button{
+                width: 22px;
+                height: 40px;
+                outline: none;
+                background: none;
+                border: 2px solid #ececec;
+                cursor: pointer;
+            }
+
+            #buy-amount button:hover{
+                background-color:#ececec ;
+            }
+
+            #buy-amount button svg{
+                color: #909090;
+            }
+
+            #buy-amount button :hover svg{
+                color: #4f4f4f;
+            }
+
+            #cart{
+                text-align: center;
+                width: 126px;
+                height: 38px;
+                margin-left: 24px;
+                background-color: #fd6e1d;
+                border: 2px solid #fd6e1d;
+                color: white;
+            }
+
+        .row3{
+            padding-top: 40px;
+            width: 417px;
+            height: 105px;
+            background-color: white;
+        }    
+            #cart1{
+                width: 353px;
+                height: 60px;
+                text-align: center;
+                background-color: #fd6e1d;
+                border: 2px solid #fd6e1d;
+                border-radius: 6px;
+                color: white;
+                padding: -30px 20px; 
+                position:absolute; 
+            }
+
+        .row4{
+            height: 80px;
+            width: 100%;
+            margin-top: 25px;
+        }
+
+    .document-content{
+        float: left;
+        margin-left: 80px;
+        width: 1150px;
+        /* height: 2000px; */
+        padding-top: 10px;
+        font-family: "Roboto", sans-serif;
+    }
+    
+        .product-img{
+            height:964px ;
+            width: 720px;
+            margin-top: 30px;
+            line-height: 1.2px; /*tăng hc giảm khoảng cách giữa các dòng*/
+        }
+        
+#footer{
+    width: 100%;
+    height: 543px;
+    padding-top: 25px;
+    background-image: url(https://nuochoachanel.vn/wp-content/uploads/2022/11/Dolce-Gabbana-Light-Blue-Italian-Love-Pour-Homme-247x296.jpg);
+    background-position-y: -1px;
+    margin-top: 4200px;
+}
+
+    .wrapper-footer{
+        width: 100%;
+        height: 372px;
+        margin-top: 28px;
+        background-color: white;
+    }
+
+        .list-info{
+            width: 100%;
+            height: 254px;
+            margin-top: 110px;
+            display: flex;
+            position:absolute;
+        }
+            .column{
+                border-right: 1px solid #807c7c;
+            }
+            .column1{
+                float: left;
+                border-right: 1px solid #807c7c;
+            }   
+            .column2{
+                float: left;
+                border-right: 1px solid #807c7c;
+            } 
+            .column3{
+                float: left;
+            }
+
+            .column, .column1, .column2, .column3{
+                width: 381px;
+                height: 240px;
+                padding: 0px 27px;
+                display: block;
+                color: rgb(77, 74, 74);
+            }
+
+    .contact{
+        height: 30px;
+        width: 100%;
+        margin-top: 100px;
+        display: flex;
+        justify-content: center;
+    }
+        .box{
+            margin: 5px;
+            padding: 0px 5px;   /* khoảng cách trên dưới , trái phải */
+        }
+        .box a{
+            text-decoration: none;
+            color: #807c7c;
+            cursor: pointer;
+        }
+        .box a:hover{
+            opacity: 0.6;  /*làm mờ đi*/
+        }
+   

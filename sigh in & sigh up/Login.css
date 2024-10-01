@@ -1,0 +1,103 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500&family=Roboto:wght@100;300&display=swap');
+
+
+*{
+    box-sizing: border-box; /*toàn bộ những phần tử trên web*/
+}
+
+body{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 17px;
+}
+
+video{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;  /*1vh tương ứng với 1% chiều cao khung hình*/
+    object-fit: cover;  /*object-fit_được sử dụng để chỉ định cách thay đổi kích thước <video> hoặc <img> để phù hợp với vùng chứa của nó ; cover_hình ảnh giữ nguyên tỷ lệ khung hình và lấp đầy kích thước nhất định.Hình ảnh sẽ được cắt bớt cho phù hợp*/
+}
+
+#wrapper{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 80vh;   /*80% độ cao của màn hình*/
+    position: relative; /*để làm chuẩn___hay nói cách khác cho phép các phần tử đè lên nhau*/
+}
+
+form{
+    border: 1px solid #dadce0;
+    /* border-radius: 5px;  */
+    border-radius: 20px; /* Tạo viền */
+    box-shadow: 10px 10px 10px gray;  /* Độ bóng */ 
+    padding: 30px;
+    background-color: #fff;
+}
+
+h3{
+    text-align: center;
+    font-size: 24px;
+    font-weight: 500;
+}
+
+.form-group{
+    margin-bottom: 15px;
+    position: relative; /*để làm chuẩn :tương đối*/
+}
+
+input{
+    height: 50px;
+    width: 300px;
+    outline: none;
+    border: 1px solid #dadce0;
+    padding: 10px;
+    border-radius: 5px;
+    font-size: inherit;
+    color: #202124;
+    /* pointer-events: none; */
+}
+
+label{
+    position: absolute; /*để làm chuẩn :tuyệt đối*/
+    padding: 0px 5px;
+    left: 5px;
+    top: 50%;
+    background-color: #fff;
+    pointer-events: none;      /*Thuộc pointer-eventstính xác định liệu một phần tử có phản ứng với các sự kiện con trỏ hay không*/
+    transform: translateY(-50%);    /*translateY_tịnh tiến theo trục Y*/
+    transition: all 0.3s ease-in-out;    /* tạo hiệu ứng quá trình chậm lại 0,3 giây, thay đổi cho tất cả thuộc tính*/       /*all: Xác định một hiệu ứng của quá trình chuyển đổi theo chiều rộng và chiều cao ; ease-in-out: Xác định một hiệu ứng của quá trình chuyển đổi với một khởi đầu và kết thúc chậm.*/
+}
+
+.form-group input:focus{        /*khi ta thực hiện focus thì border thay đổi màu viền(bị tác động lên thuộc tính border)*/
+    border: 2px solid #1a73e8;
+
+}
+/*bên trong input :khi ta thực hiện focus thì ta tác động lên lable*/       /*valid_nếu như nó đúng thì nó thực thi điều kiên bên trong*/   /*Tránh các lable đè vào dữ liệu*/
+ .form-group input:focus + label,  .form-group input:valid + label{    
+    top: 0px;
+    font-size: 13px;
+    font-weight: 500;
+    color: #1a73e8;   
+}
+
+input#btn-login{
+    background-color: #1a73e8;
+    color: #fff;
+    cursor: pointer;
+}
+
+input#btn-login:hover{
+    opacity: 0.85;  /*làm mờ đi*/
+} 
+
+.register{
+    text-align: right;
+    padding-bottom: 10px;
+    font-size: small;
+}
+    .register a{
+        text-decoration: none;
+        color: #1a73e8;
+    }
